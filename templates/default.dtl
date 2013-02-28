@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Test 4 Post and Get</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+  </head>
+  <body>
+        <form method="POST" action="/new">
+            <textarea name="blog" style="margin: 1px 0px 0px; padding: 5px; font-size: 14px; font-family: Tahoma,ËÎÌו; word-wrap: break-word; line-height: 18px; overflow-y: auto; overflow-x: hidden; outline: medium none;" range="0&0">
+            </textarea><br/>
+            <input type="submit">
+        </form>
+        {% if blogs %}
+        {% for id ,uid,data,c,u in blogs %}
+        <div>
+        {{ id }}
+        {{ uid }}
+        {{ data }}
+        </div>
+        {% endfor %}
+        {% endif  %}
+
+    </body>
+</html>
